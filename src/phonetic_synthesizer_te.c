@@ -693,8 +693,7 @@ char *te_spellNumbers(short *word, int start, int end)
 	int i;
 	char *final = (char *)malloc(100 * sizeof(char)), *num = NULL;
 	final[0] = '\0';
-	unsigned short *decimal = (unsigned short *)malloc(100 *
-			sizeof(unsigned short));
+	char *decimal = (char *)malloc(100 * sizeof(char));
 
 	for (i = start; i < end; i++) {
 		decimal[0] = word[i];
@@ -702,7 +701,8 @@ char *te_spellNumbers(short *word, int start, int end)
 		num = te_parsenum(te_replacenum(decimal, 1));
 		final = strcat(final, num);
 		final = strcat(final, " G1500 ");
-		free(num); num = NULL;
+		free(num);
+		num = NULL;
 	}
 
 	free(decimal); decimal = NULL;
