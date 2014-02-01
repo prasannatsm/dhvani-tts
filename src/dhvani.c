@@ -30,6 +30,8 @@
 #include "languages.h"
 #include "dhvani_utils.h"
 
+#include "../config.h"
+
 static const char *help_text =
     "Usage: dhvani [options] [file|text]\n"
     "[options] is any of the following \n"

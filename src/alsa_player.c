@@ -45,7 +45,7 @@
 #include "alsa_player.h"
 #include "debug.h"
 
-//#include "config.h"
+#include "config.h"
 
 #ifndef LLONG_MAX
 #define LLONG_MAX    9223372036854775807LL
